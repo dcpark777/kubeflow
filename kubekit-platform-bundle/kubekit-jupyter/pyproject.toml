@@ -1,0 +1,17 @@
+[project]
+name = "kubekit-jupyter"
+version = "0.1.0"
+description = "Jupyter magics for authoring, validating, and decompiling KFP v2 pipelines without leaving the notebook."
+requires-python = ">=3.10"
+dependencies = [
+    "kubekit>=0.5",
+    "ipython>=8.0",
+    "kfp>=2.0",
+]
+
+[project.optional-dependencies]
+ai = ["anthropic>=0.40"]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
